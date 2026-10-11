@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Gymnastics App</string>
+    <string name="subtitle">Training and scoring system</string>
+    <string name="btn_start">Start</string>
+    <string name="btn_settings">Settings</string>
+    <string name="btn_home">Home</string>
+    <string name="btn_back">Back</string>
+    <string name="btn_perform">Perform</string>
+    <string name="btn_perform_points">Perform (+%1$d)</string>
+    <string name="btn_deduct">Deduct</string>
+    <string name="btn_deduct_points">Deduct (-2)</string>
+    <string name="btn_reset">Reset</string>
+    <string name="music_label">Music</string>
+    <string name="bg_music">Background music</string>
+    <string name="sound_effect">Sound effects</string>
+    <string name="score_label">Score</string>
+    <string name="element_label">Element</string>
+    <string name="element_position">Element %1$d / %2$d</string>
+    <string name="routine_progress">Progress</string>
+    <string name="progress_count">%1$d / %2$d</string>
+    <string name="basic_label">BASIC</string>
+    <string name="intermediate_label">INTERMEDIATE</string>
+    <string name="advanced_label">ADVANCED</string>
+    <string name="final_score">Final score</string>
+    <string name="final_score_value">Final score: %1$d / %2$d</string>
+    <string name="routine_complete">Routine complete!</string>
+    <string name="deduction_stopped">The routine ended after a deduction.</string>
+    <string name="language_label">Language</string>
+    <string name="language_en">English</string>
+    <string name="language_vi">Tiếng Việt</string>
+</resources>

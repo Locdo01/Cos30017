@@ -15,6 +15,14 @@
         android:text="Hello User"
         android:textSize="30sp" />
 
+    <TextView
+        android:id="@+id/txtWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome, Admin!"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFF5E9">
+
+    <!-- HEADER -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:background="#282828"
+        android:text="@string/app_name"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <!-- CONTENT: CHIA TRÁI / PHẢI 50% - 50% -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <!-- CỘT TRÁI -->
+        <LinearLayout
+            android:id="@+id/leftColumn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="8dp">
+
+            <!-- SCORE CARD -->
+            <LinearLayout
+                android:id="@+id/scoreCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="128dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp"
+                android:background="@drawable/score_card"
+                android:elevation="2dp">
+
+                <TextView
+                    android:id="@+id/scoreCaption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/score_label"
+                    android:textColor="#6E6A78"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/scoreText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="0"
+                    android:textColor="#2878D0"
+                    android:textSize="58sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/zoneText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/zone_badge"
+                    android:gravity="center"
+                    android:minWidth="116dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:text="@string/basic_label"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- COMPLETION CARD (hiện thay cho scoreCard khi hoàn thành) -->
+            <LinearLayout
+                android:id="@+id/completeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="128dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="12dp"
+                android:background="@drawable/score_card"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/routine_complete"
+                    android:textColor="#25215D"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/finalScoreText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center"
+                    android:text="@string/final_score"
+                    android:textColor="#EF6A3A"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- CURRENT ELEMENT -->
+            <TextView
+                android:id="@+id/elementText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Element 0 / 10"
+                android:textColor="#25215D"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- PROGRESS INFORMATION -->
+            <LinearLayout
+                android:id="@+id/progressInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/routine_progress"
+                    android:textColor="#565268"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/progressCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 / 10"
+                    android:textColor="#565268"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- PROGRESS BAR -->
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="14dp"
+                android:layout_marginTop="6dp"
+                android:max="10"
+                android:progress="0"
+                android:indeterminate="false"
+                android:progressDrawable="@drawable/progress_bar" />
+
+            <!-- DEDUCTION STATUS -->
+            <TextView
+                android:id="@+id/statusText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="@string/deduction_stopped"
+                android:textColor="#A74420"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <!-- CỘT PHẢI: CÁC NÚT HÀNH ĐỘNG -->
+        <LinearLayout
+            android:id="@+id/actionButtons"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingStart="12dp"
+            android:paddingEnd="16dp">
+
+            <Button
+                android:id="@+id/btnPerform"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginBottom="8dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="@string/btn_perform"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:backgroundTint="#EF5A38"
+                app:cornerRadius="28dp" />
+
+            <Button
+                android:id="@+id/btnDeduction"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginBottom="8dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="@string/btn_deduct_points"
+                android:textAllCaps="false"
+                android:textColor="#8F3D22"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:backgroundTint="#FFE4D8"
+                app:cornerRadius="26dp" />
+
+            <Button
+                android:id="@+id/btnReset"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="@string/btn_reset"
+                android:textAllCaps="false"
+                android:textColor="#25215D"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:backgroundTint="#D8C8FF"
+                app:cornerRadius="26dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- BOTTOM NAVIGATION -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#282828">
+
+        <Button
+            android:id="@+id/homeBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:text="@string/btn_home"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/settingsBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:text="@string/btn_settings"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Gymnastics App</string>
+    <string name="subtitle">Hệ thống huấn luyện và chấm điểm</string>
+    <string name="btn_start">Bắt đầu</string>
+    <string name="btn_settings">Cài đặt</string>
+    <string name="btn_home">Trang chủ</string>
+    <string name="btn_back">Quay lại</string>
+    <string name="btn_perform">Thực hiện</string>
+    <string name="btn_perform_points">Thực hiện (+%1$d)</string>
+    <string name="btn_deduct">Trừ điểm</string>
+    <string name="btn_deduct_points">Trừ điểm (-2)</string>
+    <string name="btn_reset">Đặt lại</string>
+    <string name="music_label">Music</string>
+    <string name="bg_music">Nhạc nền</string>
+    <string name="sound_effect">Hiệu ứng âm thanh</string>
+    <string name="score_label">Điểm</string>
+    <string name="element_label">Phần tử</string>
+    <string name="element_position">Phần tử %1$d / %2$d</string>
+    <string name="routine_progress">Tiến trình</string>
+    <string name="progress_count">%1$d / %2$d</string>
+    <string name="basic_label">CƠ BẢN</string>
+    <string name="intermediate_label">TRUNG CẤP</string>
+    <string name="advanced_label">NÂNG CAO</string>
+    <string name="final_score">Tổng điểm</string>
+    <string name="final_score_value">Tổng điểm: %1$d / %2$d</string>
+    <string name="routine_complete">Hoàn thành bài biểu diễn!</string>
+    <string name="deduction_stopped">Bài biểu diễn kết thúc sau khi bị trừ điểm.</string>
+    <string name="language_label">Ngôn ngữ</string>
+    <string name="language_en">English</string>
+    <string name="language_vi">Tiếng Việt</string>
+</resources>
