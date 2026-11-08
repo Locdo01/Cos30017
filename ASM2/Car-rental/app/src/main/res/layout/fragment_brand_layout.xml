@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/brands_title"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Brand List -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Porsche -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btnPorsche"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_margin="3dp"
+                android:background="@drawable/bg_brand_btn"
+                android:src="@drawable/ic_porsche"
+                android:scaleType="fitCenter"
+                android:padding="12dp"
+                android:contentDescription="@string/brand_porsche"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/brand_porsche"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"/>
+        </LinearLayout>
+
+        <!-- Volkswagen -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btnVW"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_margin="3dp"
+                android:background="@drawable/bg_brand_btn"
+                android:src="@drawable/ic_vw"
+                android:scaleType="fitCenter"
+                android:padding="12dp"
+                android:contentDescription="@string/a11y_volkswagen"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/brand_vw"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"/>
+        </LinearLayout>
+
+        <!-- Toyota -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btnToyota"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_margin="3dp"
+                android:background="@drawable/bg_brand_btn"
+                android:src="@drawable/ic_toyota"
+                android:scaleType="fitCenter"
+                android:padding="12dp"
+                android:contentDescription="@string/brand_toyota"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/brand_toyota"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"/>
+        </LinearLayout>
+
+        <!-- VinFast -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btnVinFast"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_margin="3dp"
+                android:background="@drawable/bg_brand_btn"
+                android:src="@drawable/ic_vinfast"
+                android:scaleType="fitCenter"
+                android:padding="12dp"
+                android:contentDescription="@string/brand_vinfast"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/brand_vinfast"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

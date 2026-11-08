@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingStart="12dp"
+    android:paddingTop="8dp"
+    android:paddingEnd="12dp"
+    android:paddingBottom="8dp">
+
+    <!-- Rating sort column. -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sort_rating"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bg_sort_dropdown"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <AutoCompleteTextView
+                android:id="@+id/dropdown_top_rate"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:completionThreshold="0"
+                android:gravity="center_vertical"
+                android:inputType="none"
+                android:paddingStart="10dp"
+                android:singleLine="true"
+                android:text="@string/sort_all"
+                android:textColor="@color/text_secondary"
+                android:textSize="22sp" />
+
+            <ImageButton
+                android:id="@+id/btnRatingSortArrow"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/a11y_sort_rating"
+                android:padding="12dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_dropdown" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Cost sort column. -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sort_cost"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bg_sort_dropdown"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <AutoCompleteTextView
+                android:id="@+id/dropdown_cost"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:completionThreshold="0"
+                android:gravity="center_vertical"
+                android:inputType="none"
+                android:paddingStart="10dp"
+                android:singleLine="true"
+                android:text="@string/sort_all"
+                android:textColor="@color/text_secondary"
+                android:textSize="22sp" />
+
+            <ImageButton
+                android:id="@+id/btnCostSortArrow"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/a11y_sort_cost"
+                android:padding="12dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_dropdown" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Year sort column. -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sort_year"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bg_sort_dropdown"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <AutoCompleteTextView
+                android:id="@+id/dropdown_year"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:completionThreshold="0"
+                android:gravity="center_vertical"
+                android:inputType="none"
+                android:paddingStart="10dp"
+                android:singleLine="true"
+                android:text="@string/sort_all"
+                android:textColor="@color/text_secondary"
+                android:textSize="22sp" />
+
+            <ImageButton
+                android:id="@+id/btnYearSortArrow"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/a11y_sort_year"
+                android:padding="12dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_dropdown" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

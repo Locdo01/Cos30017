@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottomNavigation"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:background="@color/nav_background"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <!-- Favorite -->
+    <LinearLayout
+        android:id="@+id/navFavorite"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_favorite"
+            android:contentDescription="@string/nav_favorite"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nav_favorite"
+            android:textSize="15sp"
+            android:textColor="@color/nav_unselected"
+            android:layout_marginTop="6dp"/>
+    </LinearLayout>
+
+
+    <!-- Rentals -->
+    <LinearLayout
+        android:id="@+id/navRentals"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_rentals"
+            android:contentDescription="@string/nav_rentals"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nav_rentals"
+            android:textSize="15sp"
+            android:textColor="@color/nav_unselected"
+            android:layout_marginTop="6dp"/>
+    </LinearLayout>
+
+
+    <!-- Home -->
+    <LinearLayout
+        android:id="@+id/navHome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_home"
+            android:contentDescription="@string/nav_home"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nav_home"
+            android:textSize="15sp"
+            android:textColor="@color/nav_unselected"
+            android:layout_marginTop="6dp"/>
+    </LinearLayout>
+
+
+    <!-- Cars -->
+    <LinearLayout
+        android:id="@+id/navCars"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:layout_width="44dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_cars"
+            android:contentDescription="@string/nav_cars"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nav_cars"
+            android:textSize="15sp"
+            android:textColor="@color/nav_unselected"
+            android:layout_marginTop="6dp"/>
+    </LinearLayout>
+
+
+    <!-- Settings -->
+    <LinearLayout
+        android:id="@+id/navSettings"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:layout_width="44dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_settings"
+            android:contentDescription="@string/nav_settings"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nav_settings"
+            android:textSize="15sp"
+            android:textColor="@color/nav_unselected"
+            android:layout_marginTop="6dp"/>
+    </LinearLayout>
+
+</LinearLayout>

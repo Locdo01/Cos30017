@@ -1,0 +1,13 @@
+<resources>
+    <color name="app_background">#FF101216</color>
+    <color name="app_surface">#FF1B1E24</color>
+    <color name="text_primary">#FFF1F3F5</color>
+    <color name="text_secondary">#FFB6BBC3</color>
+    <color name="app_border">#FF424750</color>
+    <color name="nav_background">#FF1B1E24</color>
+    <color name="nav_selected">#FF8DB6FF</color>
+    <color name="nav_unselected">#FFB6BBC3</color>
+    <color name="control_surface">#FF292E36</color>
+    <color name="text_hint">#FF9CA3AD</color>
+    <color name="brand_blue_text">#FF8DB6FF</color>
+</resources>

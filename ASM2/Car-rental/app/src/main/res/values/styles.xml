@@ -1,0 +1,20 @@
+<resources>
+    <!-- Reused for car names on Home, Cars, Favorites, and Details. -->
+    <style name="CarTitleText">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Reused for supporting car facts so they stay readable in both themes. -->
+    <style name="CarInfoText">
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!-- Keeps the three-column details row readable without clipping long labels. -->
+    <style name="CarCompactInfoText">
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+</resources>

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Main car card. -->
+    <LinearLayout
+        android:id="@+id/carCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_car_card"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Body type and car name; favorite button is on the right. -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvBodyType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/brand_blue_text"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvCarName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/CarTitleText" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btnFavorite"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/a11y_add_favorite"
+                android:padding="4dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_favorite" />
+        </LinearLayout>
+
+        <!-- One main image for this car on Home. -->
+        <ImageView
+            android:id="@+id/ivCarImage"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/a11y_car_image"
+            android:scaleType="fitCenter" />
+
+        <!-- Mileage below the image. -->
+        <TextView
+            android:id="@+id/tvCarMileage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            style="@style/CarInfoText" />
+
+        <!-- Daily price and rating. -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvDailyCost"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/brand_blue_text"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvCarRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_secondary"
+                android:textSize="22sp" />
+
+            <RatingBar
+                android:id="@+id/rbCarRating"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:progressTint="#FFFFC107"
+                android:secondaryProgressTint="@color/app_border"
+                android:stepSize="0.1" />
+        </LinearLayout>
+
+        <!-- Specifications arranged in two equal-width columns. -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:orientation="vertical">
+
+            <!-- First specification row: transmission and fuel. -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Transmission cell. -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="6dp">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_marginEnd="8dp"
+                        android:contentDescription="@string/a11y_transmission"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_transmission" app:tint="@color/text_primary" />
+
+                    <TextView
+                        android:id="@+id/tvTransmission"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        style="@style/CarInfoText" />
+                </LinearLayout>
+
+                <!-- Fuel type cell. -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="6dp">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_marginEnd="8dp"
+                        android:contentDescription="@string/a11y_fuel"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_fuel" app:tint="@color/text_primary" />
+
+                    <TextView
+                        android:id="@+id/tvFuelType"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        style="@style/CarInfoText" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Second specification row: seats and year. -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+
+                <!-- Seat count cell. -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="6dp">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_marginEnd="8dp"
+                        android:contentDescription="@string/a11y_seats"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_seats" app:tint="@color/text_primary" />
+
+                    <TextView
+                        android:id="@+id/tvSeats"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        style="@style/CarInfoText" />
+                </LinearLayout>
+
+                <!-- Year cell. -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="6dp">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_marginEnd="8dp"
+                        android:contentDescription="@string/sort_year"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_year" app:tint="@color/text_primary" />
+
+                    <TextView
+                        android:id="@+id/tvYear"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        style="@style/CarInfoText" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Rent button aligned to the bottom-right corner. -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRentNow"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_rent_btn"
+            android:paddingStart="22dp"
+            android:paddingEnd="22dp"
+            android:text="@string/rent_now"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Shown when no cars match the search or filters. -->
+    <include
+        layout="@layout/fragment_not_found"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+</LinearLayout>
