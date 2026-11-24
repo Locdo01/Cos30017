@@ -15,6 +15,12 @@
         android:text="Hello User"
         android:textSize="30sp" />
 
+    <Button
+        android:id="@+id/btnExit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back" />
+
     <TextView
         android:id="@+id/txtWelcome"
         android:layout_width="wrap_content"

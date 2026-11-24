@@ -1,7 +1,9 @@
 
 package com.example.login
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -38,5 +40,16 @@ class AdminActivity : AppCompatActivity() {
         val txtWelcome = findViewById<TextView>(R.id.txtWelcome)
         txtWelcome.text = "Welcome, $username!"
         Toast.makeText(this,username, Toast.LENGTH_LONG).show()
+
+        val btnExit = findViewById<Button>(R.id.btnExit)
+        btnExit.setOnClickListener {
+            val result = Intent()
+            result.putExtra("Test1", "Hello")
+            result.putExtra("Test2", "Value2")
+            setResult(RESULT_OK, result)
+            finish()
+        }
+
+
     }
 }

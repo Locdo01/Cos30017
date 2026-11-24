@@ -1,6 +1,7 @@
 
 package com.example.login
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -9,6 +10,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -59,6 +61,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btn2.setOnClickListener(this)
     }
 
+    private val getResult = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) {
+        if (it.resultCode == RESULT_OK) {
+            val value = it.data?.getStringExtra("Test1")
+            Toast.makeText(this, value, Toast.LENGTH_SHORT).show()
+        }
+    }
+
     private fun observeViewModel() {
         viewModel.badgeCount.observe(this) { value ->
             showToast(value)
@@ -77,6 +88,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val a = txt1.text.toString()
         val b = txt2.text.toString()
 
+
         when (v?.id) {
             R.id.btn1 -> {
                 if (a == "Loc" && b == "123") {
@@ -87,9 +99,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                         Toast.LENGTH_LONG
                     ).show()
 
+                    val bun = Bundle()
+                    bun.putString("a", a)
+
                     val intent = Intent(this, AdminActivity::class.java)
-                    intent.putExtra("a", a)
+                    intent.putExtras(bun)
                     startActivity(intent)
+                    getResult.launch(intent)
                 } else {
                     Toast.makeText(
                         this,
@@ -105,6 +121,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
         }
     }
+
 
     override fun onStart() {
         super.onStart()
